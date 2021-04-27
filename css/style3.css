@@ -1,0 +1,338 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Импорт шрифтов */
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,500i&amp;subset=cyrillic');
+@import url(http://fonts.googleapis.com/css?family=Philosopher&subset=cyrillic);
+ 
+ .body {
+
+ 	/*display: flex;*/
+ 	font-family: Montserrat, sans-serif;
+
+ }
+
+
+ *, *:after, *:before {
+   /*transition: .5s ease-in-out;*/
+   /* добавим плавность переходов для всех элементов страницы*/
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	font-family: Montserrat, sans-serif;
+}
+p{
+	margin-top: 0;
+}
+
+/*a{
+	text-decoration: none !important;
+	color: inherit;
+	position: relative;
+	transition: color .2s linear;
+}
+a:after{
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: #FF0000;
+	position: absolute;
+	opacity: 0;
+	transition: opacity .2s linear;
+}
+a:hover:after{
+	opacity: 1;
+}
+a:hover{
+	color: #FF0000;
+}*/
+section{
+	padding: 0 0 25px 0;
+}
+.container{
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+section .container{
+	background: rgba(0,0,0,0.1);
+	z-index: -10;
+	min-height: 1900px;
+}
+
+.main-title{
+	font-size: 100px;
+	left:10%;
+	position: relative;
+	font-weight: bold;
+	display: inline-block;
+	color: #000;
+	z-index: 2;
+}
+
+.main-title-shadow{
+	z-index: 2;
+	opacity: 0.3;
+	position: absolute;
+	bottom: -30%;
+	left: -12%;
+	line-height: 1;
+	font-size: 120px;
+}
+.intro .main-title{ 
+	margin: 0 0  0 70px;
+}
+
+
+header{
+
+	padding: 10px 0;
+	position: relative;
+
+}
+
+header .container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .logo{
+	max-width: 80px;
+	flex: 0 0 80px;;
+}
+
+header .menu{
+	/*flex: 0 0 auto;*/
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.menu-navs{
+	display: flex;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	margin-right: 30px;
+}
+
+.menu-navs li{
+	margin-right: 15px;
+}
+
+.search .form{
+	display: flex;
+	align-items: center;
+}
+
+.input{
+	padding: 10px;
+	font-size: 16px;
+	/*border: 0;*/
+	border-radius: 50px;
+	border: 1px solid #ccc;
+}
+
+.btn{
+	background: #fff;
+	border-radius: 50px;
+	border: 1px solid #ccc;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.column{
+	max-width: 30%;
+	flex: 0 0 30%;
+	padding: 0 15px;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.column:nth-child(2){
+	align-items: center;
+}
+.column:nth-child(3){
+	align-items: flex-end;
+}
+
+.trend-block{
+	max-width: 320px;
+	width: 100%;
+	margin-bottom: 30px;
+}
+.trend-block-image{
+	width: 100%;
+}
+
+.trend-block-image:hover .trend-block-image-red img{
+	opacity: 0.4;
+}
+.trend-block-image-red:hover{
+	background: red;
+	width: 100%;
+	height: 100%;
+	/*max-height: 344px;*/
+}
+.trend-block-image-red img{
+	transition: opacity 0.2s linear;
+}
+.trend-block-body{
+	position: relative;
+	z-index: 2;
+	max-width: 220px;
+	background:#fff;
+	margin-right: 0;
+	margin-top: -50px;
+	margin-left: auto;
+	padding: 20px 15px 10px;
+}
+
+.trend-block-body-tag{
+	opacity: 0.4;
+	font-size: 10px;
+	margin-bottom: 15px;
+	margin-top: -5px;
+}
+
+.trend-block-body-title{
+	font-size: 15px;
+	opacity: 1;
+	font-weight: 600;
+}
+
+.trend-block-body:hover .trend-block-body-title{
+	opacity: 0.8;
+}
+.trend-block-body-desciption{
+	margin-bottom: 10px;
+	font-size: 13px;
+	margin-top: 5px;
+}
+.trend-block-body:hover .trend-block-body-desciption{
+	opacity: 0.8;
+}
+
+.trend-block-body-underline{
+	width: 30px;
+	height: 3px;
+	background:blue;
+}
+
+.trend-block-body:hover .trend-block-body-underline{
+	background:red;
+}
+
+.tremd-block-lg{
+	max-width: 380px;
+}
+
+.trend-block-lg .trend-block-body{
+	margin-top: -100px;
+	max-width: 230px;
+}
+.img-fluid{
+		max-width: 100%;
+		height: auto;
+}
+
+.btn-back{
+	display: flex;
+	margin-left: 80px;
+	margin-top: -70px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: black;
+	font-weight: 500;
+}
+
+.btn-back:hover{
+	color: blue;
+}
+
+
+
+@media(max-width: 776px){
+		.column{
+			max-width: 100%;
+			flex: 0 0 100%;
+			align-items: center!important;
+		}
+		section .container{
+			min-height: 5200px;
+		}
+		.button{
+			font-size: 13px;
+			margin-left: 0px;
+			margin-top: 50px;
+		}
+		.main-title{
+		font-size: 100px;
+		left:-5%;
+		}
+		.main-title-shadow{
+			font-size: 120px;
+		}
+	}
+	

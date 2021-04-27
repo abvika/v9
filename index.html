@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>	
+  <link rel="stylesheet" type="text/css" href="css/style2.css">
+  
+
+  <title>Мода</title>
+ </head>
+ <body>
+
+ 	<header>
+ 		<div class="container">
+ 			<div class="logo">
+ 				<img src="img/lg.png" class="img-fluid" alt="">
+ 			</div>
+ 			<div class="menu" id="menu">
+ 				<ul class="menu-navs">
+ 				<li>
+ 					<a class="menu-navs-line" href="">Главная</a>
+ 				</li>
+ 				<li>
+ 					<a class="menu-navs-line" href="">О сервисе </a>
+ 				</li>
+ 				<li>
+ 					<a class="menu-navs-line" href="">Контакты</a>
+ 				</li>
+ 			</ul>
+ 			<div class="search">
+ 				<form class="form">
+					<input class="input" type="text" placeholder="Поиск..." >
+					<button class="btn"><img class="img" src="img/лупа.png"></button>
+				</form>
+ 			</div>
+
+ 			</div>
+
+ 			<div class="menu-burger">
+ 				<span></span>
+ 				<a href="" class="btn-bur" id="menu-btn"></a>
+ 			</div>
+ 			
+ 			
+ 		</div>
+ 	</header>
+ 	
+
+
+	 <section class="intro">
+	 	<div class="container">
+	 		<h1 class="main-title">
+	 			Мода
+	 			<!--<span class="main-title-shadow">
+	 				Мода
+	 			</span>-->
+	 		</h1>
+	 		<div class="intro-image">
+	 			<div class="intro-image-img"></div>
+	 		</div>
+
+	 		<ul class="intro-tabs">
+	 			<li>
+	 				<a href="indextrend.html">Тренды</a>
+	 			</li>
+	 			<li>
+	 				<a href="">Базовый гардероб</a>
+	 			</li>
+	 			<li>
+	 				<a href="">Коллекции</a>
+	 			</li>
+	 		</ul>
+
+	 	</div>
+	 </section>
+
+	 <section class="quote">
+	 	<div class="container container-lg">
+	 		<div class="quote-block">
+	 			<div class="qoute-block-text">
+		 			<p class="text-quote">«У вас не будет второго шанса произвести первое впечатление»</p>
+					<p class="text-author">Коко Шанель</p>
+				</div>
+	 		</div>
+	 	</div>
+	 </section>
+
+	 <script>
+
+	 	$('#menu-btn').click(function(event) {
+	 		/* Act on the event */
+	 		event.preventDefault();
+	 		$('#menu').toggleClass('open');
+
+	 	});
+	 </script>
+
+
+
+ 	</body>
+</html>

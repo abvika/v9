@@ -1,0 +1,410 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Импорт шрифтов */
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,500i&amp;subset=cyrillic');
+@import url(http://fonts.googleapis.com/css?family=Philosopher&subset=cyrillic);
+ 
+ .body {
+
+ 	/*display: flex;*/
+ 	font-family: Montserrat, sans-serif;
+
+ }
+
+
+ *, *:after, *:before {
+   /*transition: .5s ease-in-out;*/
+   /* добавим плавность переходов для всех элементов страницы*/
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	font-family: Montserrat, sans-serif;
+}
+
+
+a{
+	text-decoration: none !important;
+	color: inherit;
+	position: relative;
+	transition: color .2s linear;
+}
+a:after{
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: #FF0000;
+	position: absolute;
+	opacity: 0;
+	transition: opacity .2s linear;
+}
+a:hover:after{
+	opacity: 1;
+}
+a:hover{
+	color: #FF0000;
+}
+section{
+	padding: 0 0 25px 0;
+}
+.container{
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.container-lg{
+	max-width: 1200px;
+}
+
+.main-title{
+	font-size: 140px;
+	left:-5%;
+	position: relative;
+	font-weight: bold;
+	display: inline-block;
+	color: #fff;
+	animation: blur 4s ease-out infinite;
+	z-index: 2;
+}
+
+.main-title-shadow{
+	/*z-index: -1;
+	/*opacity: 0.2;*/
+	position: absolute;
+	bottom: -40%;
+	left: -12%;
+	line-height: 1;
+	font-size: 160px;
+}
+.intro-image{
+	margin-top: -80px;
+	width: 100%;
+	position: relative;
+	margin-bottom: 80px;
+}
+.intro-image-img{
+	background: url(../img/intro_img.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+		min-height: 500px;
+	width: 100%;
+	margin-left: -50px;
+}
+.intro-image:before{
+	content: '';
+	position: absolute;
+	width: calc(100% + 0px);
+	height: calc(100% + 100px);
+	top: -50px;
+	z-index: -1;
+	background: blue;
+}
+
+.intro .main-title{ 
+	margin: 0 0  0 70px;
+}
+
+.intro-tabs{
+	width: 100%;
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	justify-content: space-between;
+	/*padding: 10px 0;*/
+	font-size: 20px;
+}
+
+.intro-tabs a{
+	display: inline-block;
+	padding: 5px 0;
+}
+
+.quote{
+	padding-top: 0;
+}
+.quote-block{
+	min-height: 250px;
+	background: #ccc;
+	width: 100%;
+	padding: 3% 20%;
+}
+
+.text-quote{
+	display: inline-block;
+	font-weight: 400;
+	color: #000;
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	justify-content:center;
+	font-size: 48px;
+
+}
+
+.text-author{
+	font-weight: 200;
+	color: #000;
+	display: inline-block;
+	font-family: 'Montserrat', sans-serif;
+	left:80%;
+	font-size: 24px;
+	position: relative;
+}
+
+.img-fluid{
+	max-width: 100%;
+	height: auto;
+}
+
+header{
+
+	padding: 10px 0;
+	position: relative;
+
+}
+
+header .container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .logo{
+	max-width: 80px;
+	flex: 0 0 80px;;
+}
+
+header .menu{
+	/*flex: 0 0 auto;*/
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.menu-navs{
+	display: flex;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	margin-right: 30px;
+}
+
+.menu-navs li{
+	margin-right: 15px;
+}
+
+.search .form{
+	display: flex;
+	align-items: center;
+}
+
+.input{
+	padding: 10px;
+	font-size: 16px;
+	/*border: 0;*/
+	border-radius: 50px;
+	border: 1px solid #ccc;
+}
+
+.btn{
+	background: #fff;
+	border-radius: 50px;
+	border: 1px solid #ccc;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+
+.menu-burger{
+	display: none;
+}
+@media (max-width: 992px){
+	header{
+		height: 70px;
+		position: fixed;
+		background: #fff;
+		top: 0;
+		width: 100%;
+		z-index: 999999;
+
+	}
+	header .logo{
+		flex: 0 0 50px;
+	}
+
+	body{
+		padding-top: 80px;
+	}
+	.intro-tabs{
+		flex-direction: column;
+	}
+	.menu-burger{
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 20px;
+
+	}
+	span .menu-burger{
+		position: absolute;
+		background-color: #fff;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		
+	}
+	.menu-burger:before,
+	.menu-burger:after{
+		content: '';
+		background-color: #000;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+
+	}
+	.menu-burger:before{
+		top:0;
+	}
+	.menu-burger:after{
+		bottom: 0;
+	}
+
+	header .menu{
+		position: absolute;
+		left: 0;
+		background: #fff;
+		top: 70px;
+		width: 100%;
+		padding: 15px;
+		display: flex;
+		flex-direction: column;
+		display: none;
+		
+	}
+	header .menu.open{
+		display: flex;
+	}
+	.menu-navs{
+		flex-direction: column;
+
+	}
+	.menu-navs li{ 
+		display: inline-block;
+		margin-bottom: 10px;margin-right: 0;
+		text-align: center;
+	}
+
+	.quote-block{
+		padding: 0 0;
+	}
+
+	.text-quote{
+		display: inline-block;
+		text-align: center;
+		justify-content: center;
+		padding: 10% 10% 2% 10%;/*
+		padding-top:5%;
+		padding-bottom: 2%;*/
+		font-size: 32px;
+	}
+
+	.text-author{
+		font-size: 18px;
+		left:60%;
+	}
+	.main-title{
+		font-size: 100px;
+		left:0%;
+	}
+	.main-title-shadow{
+		font-size: 140px;
+	}
+}
+
+
+/*@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+*/
+@keyframes blur {
+  from {
+    text-shadow:0px 0px 10px #fff,
+      0px 0px 10px #fff, 
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #7B96B8,
+      0px 0px 150px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px -10px 100px #7B96B8,
+      0px -10px 100px #7B96B8;
+  }
+}
+
+
+
+
+
+
+
