@@ -324,15 +324,15 @@ header .menu{
 		}
 		.button{
 			font-size: 13px;
-			margin-left: 0px;
-			margin-top: 50px;
+			margin-left: -10%;
+			margin-top: 60px;
 		}
 		.main-title{
-		font-size: 100px;
-		left:-5%;
+		font-size: 90px;
+		left:0%;
 		}
 		.main-title-shadow{
-			font-size: 120px;
+			font-size: 100px;
 		}
 	}
 	
